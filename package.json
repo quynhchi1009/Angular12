@@ -6,6 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
+    "xaydung" :"ng build --base-href /Angular12/ --deploy-url /Angular12/ --configuration production",
     "test": "ng test"
   },
   "private": true,

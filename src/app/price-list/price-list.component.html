@@ -1,0 +1,20 @@
+<h2>Berries's</h2>
+<table id = "table">
+    <tr>
+        <th>Number</th>
+        <th>Name</th>
+        <th>Price</th>
+        
+    </tr>
+    <tr *ngFor = "let fruit of fruitsArray; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ fruit.name }}</td>
+        <td style="text-align: right;">
+            <span [ngClass] = "{ 'negative' : fruit.price < 0 } ">{{ fruit.price }}</span>
+        </td>
+        <td>
+            <span> {{ fruit.discount }}</span>
+        </td> 
+    </tr>
+</table>
+
