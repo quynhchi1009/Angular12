@@ -17,9 +17,26 @@
                 </span>
             </td>
             <td>
-                <span> {{ fruit.discount | onSale | uppercase}}</span>
+                <span> {{ fruit.discount | onSale | uppercase }}</span>
             </td> 
         </tr>
     </table>
+
+    <label for="types">Choose a type:</label>
+    <select name="types" 
+            id="types" 
+            (change)="chooseType($event)">
+        <option *ngFor="let fruitType of fruitTypes" value="{{ fruitType.name }}">
+            {{ fruitType.name }}
+        </option>
+    </select>
+    <br>
+
+    <label for="fruit">Choose a fruit:</label>
+    <select name="fruit" id="fruit">
+        <option *ngFor="let fruit of fruits" value="{{ fruit }}">
+            {{ fruit }}
+        </option>
+    </select>
 </div>
 
