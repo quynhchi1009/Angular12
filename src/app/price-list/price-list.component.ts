@@ -44,6 +44,7 @@ export class PriceListComponent implements OnInit {
     //   this.fruits = searchedName[0].fruits;
     // }
 
+    //Cach2
     this.fruits = this.fruitTypes.find(data => data.name == choseName)?.fruits || [];
   }
 
