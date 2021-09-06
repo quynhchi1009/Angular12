@@ -5,7 +5,7 @@
         <table id = "table" style="text-align: center;">
             <thead>
             <tr >
-                    <th scope="col">Number</th>
+                    <th scope="col">Product ID</th>
                     <th scope="col">Name</th>
                     <th scope="col">Price for each</th>
                     <th scope="col">Discounted</th>
@@ -36,7 +36,7 @@
 
     <br>
 
-    <label for="types">Choose a type:</label>
+    <label for="types">Choose a type: </label>
     <select name="types" 
             id="types" 
             (change)="chooseType($event)">
@@ -46,7 +46,7 @@
     </select>
     <br>
 
-    <label for="fruit">Choose a fruit:</label>
+    <label for="fruit">Choose a fruit: </label>
     <select name="fruit" id="fruit">
         <option *ngFor="let fruit of fruits" value="{{ fruit }}">
             {{ fruit }}
