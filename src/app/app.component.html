@@ -1,10 +1,23 @@
-<h1>Welcome to our home market</h1>
-<!-- This nav gives you links to click, which tells the router which route to use (defined in the routes constant in  AppRoutingModule) -->
-<nav>
-  <ul>
-    <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
-    <li><a routerLink="/pricelist" routerLinkActive="active">Price List</a></li>
+<!-- Image and text -->
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <img src="https://theme.hstatic.net/1000141988/1000740859/14/logo.png?v=137" height="30" class="d-inline-block align-top" alt="farmersmarket">
+  </a>
+  <!-- This nav gives you links to click, which tells the router which route to use (defined in the routes constant in  AppRoutingModule) -->
+  <ul class="nav nav-tabs justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link active" routerLink="/home" routerLinkActive="active">Hotline</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/pricelist" routerLinkActive="active">Price List</a>
+    </li>
   </ul>
+  <form class="form-inline my-2 my-lg-0">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
 </nav>
+
+
 <!-- The routed views render in the <router-outlet>-->
 <router-outlet></router-outlet>

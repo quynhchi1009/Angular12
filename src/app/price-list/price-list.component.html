@@ -1,37 +1,40 @@
-<h2>Berries's</h2>
-<div style="border: 1px solid; padding: 10px; box-shadow: 5px 10px mediumaquamarine; width: 660px;">
-    <table id = "table">
-        <tr>
-            <th>Number</th>
-            <th>Name</th>
-            <th>Price</th>
-            <th>Discounted</th>
-            <th>Amount</th>
-            <th>Sum</th>
-        </tr>
-        <tr *ngFor = "let fruit of fruitsArray; let i = index"
-            style="text-align: center;">
-            <td>{{ i + 1 }}</td>
-            <td>{{ fruit.name | lowercase }}</td>
-            <td style="text-align: right;">
-                <span [ngClass] = "{ 'negative' : fruit.price < 0 } ">
-                    {{ fruit.price |  currency:'EUR':'symbol':'1.2-2' }}
-                </span>
-            </td>
-            <td>
-                <span> {{ fruit.discount | onSale | uppercase }}</span>
-            </td> 
-            <td>
-                {{ fruit.amount }}
-            </td>
-            <td>
-                {{ fruit.sum |  currency:'EUR':'symbol':'1.2-2' }}
-            </td>
-        </tr>
-    </table>
-</div>
+<div style="padding: 30px;">  
+    <h2>Berries's</h2>
+    <div style="border: 1px solid; padding: 10px; box-shadow: 5px 10px mediumaquamarine; width: 660px;"
+        class="table-responsive">
+        <table id = "table" style="text-align: center;">
+            <thead>
+            <tr >
+                    <th scope="col">Number</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Price for each</th>
+                    <th scope="col">Discounted</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col">Sum</th>
+                </tr>
+            </thead>
+            <tr *ngFor = "let fruit of fruitsArray; let i = index">
+                <td>{{ i + 1 }}</td>
+                <td>{{ fruit.name | lowercase }}</td>
+                <td style="text-align: right;">
+                    <span [ngClass] = "{ 'negative' : fruit.price < 0 } ">
+                        {{ fruit.price |  currency:'EUR':'symbol':'1.2-2' }}
+                    </span>
+                </td>
+                <td>
+                    <span> {{ fruit.discount | onSale | uppercase }}</span>
+                </td> 
+                <td>
+                    {{ fruit.amount }}
+                </td>
+                <td>
+                    {{ fruit.sum |  currency:'EUR':'symbol':'1.2-2' }}
+                </td>
+            </tr>
+        </table>
+    </div>
 
-<br>
+    <br>
 
     <label for="types">Choose a type:</label>
     <select name="types" 
@@ -49,4 +52,5 @@
             {{ fruit }}
         </option>
     </select>
+</div>  
 

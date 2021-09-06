@@ -12,10 +12,10 @@ export class PriceListComponent implements OnInit {
   public sum = 0;
   public fruitsArray = [
     {name: 'Strawberries', price: 11.99, discount: false, amount: 15, sum: 0},
-    {name: 'Raspberries', price: 14.99, discount: true, amount: 30, sum: 0},
+    {name: 'Raspberries', price: 14.99, discount: true, amount: 30},
     {name: 'Blueberries', price: 12.99, discount: false,  amount: 20, sum: 0},
     {name: 'Kiwifruit', price: 14.99, discount: true, amount: 15, sum: 0},
-    {name: 'Passionfruit', price: -5, discount: false,  amount: 45}
+    {name: 'Passionfruit', price: -5, discount: false,  amount: 0}
   ];
   public fruitTypes = [
     { 
