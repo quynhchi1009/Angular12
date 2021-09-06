@@ -1,15 +1,22 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from '../models/product.model';
 import { CommonService } from '../Services/common.service';
+import { HttpClientService } from '../Services/http-client.service';
 
 @Component({
   selector: 'app-price-list',
   templateUrl: './price-list.component.html',
   styleUrls: ['./price-list.component.scss']
 })
+
 export class PriceListComponent implements OnInit {
   public fruits: string[] = ['Types of fruit'];
   public amount = 9;
   public sum = 0;
+  public products: Product[] = [];
+  public id!: number;
+  public product: Product = new Product;
+
   public fruitsArray = [
     {name: 'Strawberries', price: 11.99, discount: false, amount: 15, sum: 0},
     {name: 'Raspberries', price: 14.99, discount: true, amount: 30},
@@ -44,7 +51,9 @@ export class PriceListComponent implements OnInit {
       fruits: []},
   ];
 
-  constructor(private common: CommonService) { }
+  constructor(
+    private common: CommonService, 
+    private http: HttpClientService) { }
 
   ngOnInit(): void {
     this.sum = this.common.calculate(this.amount);
@@ -72,4 +81,11 @@ export class PriceListComponent implements OnInit {
     this.fruits = this.fruitTypes.find(data => data.name == choseName)?.fruits || [];
   }
 
+  public getAllProducts() {
+    this.http.getAllProducts().subscribe(data => this.products = data);
+  }
+
+  public getProduct() {
+    this.http.getProduct(this.id).subscribe(data => this.product = data);
+  }
 }

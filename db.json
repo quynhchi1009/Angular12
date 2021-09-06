@@ -1,0 +1,25 @@
+{
+    "products": [
+        {"id": 1, "type": "Berries", "name": "Strawberries", "price": 11.99, "discount": false, "amount": 15},
+        {"id": 2, "type": "Berries", "name": "Raspberries", "price": 14.99, "discount": true, "amount": 30},
+        {"id": 3, "type": "Berries", "name": "Blueberries", "price": 12.99, "discount": false,  "amount": 20, "sum": 0},
+        {"id": 4, "type": "Berries", "name": "Kiwifruit", "price": 14.99, "discount": true, "amount": 15, "sum": 0},
+        {"id": 5, "type": "Berries", "name": "Passionfruit", "price": 4.5, "discount": false,  "amount": 0},
+        {"id": 6, "type": "Apples & pears", "name": "Gala Apple", "price": 2.50, "discount": false, "amount": 45},
+        {"id": 7, "type": "Apples & pears", "name": "KORU Apple", "price": 3.6, "discount": true, "amount": 30},
+        {"id": 8, "type": "Apples & pears", "name": "Rockit Apple", "price": 2.35, "discount": false,  "amount": 124, "sum": 0},
+        {"id": 9, "type": "Tropical & exotic", "name": "Dole Banana", "price": 1.99, "discount": true, "amount": 15, "sum": 0},
+        {"id": 10, "type": "Tropical & exotic", "name": "Unifarm Banana", "price": 1.89, "discount": false,  "amount": 123},
+        {"id": 11, "type": "Melons", "name": "Global Gap Melon", "price": 0, "discount": false, "amount": 0},
+        {"id": 12, "type": "Melons", "name": "rockmelons", "price": 2.99, "discount": true, "amount": 30},
+        {"id": 13, "type": "Tomatoes & avocados", "name": "Daklak Avocado", "price": 12.99, "discount": false,  "amount": 0, "sum": 0},
+        {"id": 14, "type": "Citrus", "name": "Oranges", "price": 2.99, "discount": true, "amount": 35, "sum": 0},
+        {"id": 15, "type": "Tomatoes & avocados", "name": "booth 7 Daklak Avocado", "price": 1.59, "discount": false,  "amount": 30},
+        {"id": 16, "type": "Tropical & exotic", "name": "Ananas", "price": 3.50, "discount": false, "amount": 15},
+        {"id": 17, "type": "Melons", "name": "Kiwami Melons", "price": 6.6, "discount": true, "amount": 30},
+        {"id": 18, "type": "Citrus", "name": "limes", "price": 0.35, "discount": false,  "amount": 124, "sum": 0},
+        {"id": 19, "type": "Tropical & exotic", "name": "Hoa Loc Mango", "price": 2.99, "discount": true, "amount": 15},
+        {"id": 20, "type": "Apples & pears", "name": "Pears", "price": 3.89, "discount": false,  "amount": 20}
+    ]
+}
+

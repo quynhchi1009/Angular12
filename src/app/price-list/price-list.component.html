@@ -52,5 +52,24 @@
             {{ fruit }}
         </option>
     </select>
+
+    <br>
+        <input type="number" [(ngModel)]="id" placeholder="Product ID">
+        <p-button label="Get Product" (click)="getProduct()"></p-button>
+        <button pButton type="button" label="Get all Products" (click)="getAllProducts()"></button>
+
+        <div *ngIf="product">
+            Product is called {{product.name}}. It costs {{product.price}} and
+            is only available with {{product.amount}} Piece(s). 
+        </div>
+        
+        <div *ngIf="products">
+            <hr>
+            <ul>
+              <li *ngFor="let product of products;">
+                {{product.name}} is {{product.price}} and has {{product.discount}}.
+            </li>
+            </ul>
+        </div>
 </div>  
 
